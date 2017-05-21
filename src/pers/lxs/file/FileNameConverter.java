@@ -42,6 +42,11 @@ public class FileNameConverter {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		if(args.length != 3) {
+			System.out.println("There are three parameters are needed! Please check your parameters correctly!");
+			return;
+		}
+		
 		String srcFilePath = args[0];
 		String srcFileSuffix = args[1];
 		String dstFileSuffix = args[2];
