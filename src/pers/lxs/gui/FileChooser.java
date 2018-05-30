@@ -9,7 +9,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;  
   
 public class FileChooser extends JFrame implements ActionListener{  
-    JButton open=null;  
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JButton open=null;  
     public static void main(String[] args) {  
         new FileChooser();  
     }  
