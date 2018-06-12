@@ -23,10 +23,19 @@ public class FileNameConverter {
 		if(srcFile.isFile()) {
 			renameFileName(srcFile);
 		} else if(srcFile.isDirectory()) {
-			File[] files = srcFile.listFiles();
-			
-			for(File file : files) {
-				renameFileName(file);
+			process(srcFile);
+		}
+	}
+	
+	public void process(File file) {
+		
+		File[] files = file.listFiles();
+		
+		for(File f : files) {
+			if(f.isFile()) {
+				renameFileName(f);
+			} else if(f.isDirectory()) {
+				process(f);
 			}
 		}
 	}
